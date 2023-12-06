@@ -25,6 +25,10 @@ jobs:
         with:
           path: ~/.npm
           key: ${{ env.CACHE_KEY }}-${{ hashFiles('**/package-lock.json') }}
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
       - name: Install dependencies
         run: npm ci
       - name: Run server
