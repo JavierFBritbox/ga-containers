@@ -24,7 +24,8 @@ jobs:
     services:
       mongodb:
         image: mongo
-        ports: [27017:27017]
+        ports: 
+            - 27017:27017
         env:
           MONGO_INITDB_ROOT_USERNAME:  ${{ vars.MONGODB_USERNAME }}
           MONGO_INITDB_ROOT_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
