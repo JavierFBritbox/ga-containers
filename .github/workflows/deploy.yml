@@ -31,7 +31,7 @@ jobs:
           MONGO_INITDB_ROOT_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
     steps:
       - name: Get Tar
-        run: apt-get install -y build-essential
+        run: yum install -y build-essential
       - name: Get Code
         uses: actions/checkout@v4
       - name: Cache dependencies
