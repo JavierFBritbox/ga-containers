@@ -12,7 +12,7 @@ jobs:
     environment: testing
     runs-on: ubuntu-latest
     container:
-      image: public.ecr.aws/lambda/nodejs:20-arm64
+      image: public.ecr.aws/lambda/nodejs:latest-x86_64
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb
       MONGODB_CLUSTER_ADDRESS: mongodb
