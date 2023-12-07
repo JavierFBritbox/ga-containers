@@ -32,6 +32,8 @@ jobs:
     steps:
       - name: Get Tar
         run: dnf install -y tar
+      - name: Get Gzip
+        run: dnf install -y gzip
       - name: Get Code
         uses: actions/checkout@v4
       - name: Cache dependencies
